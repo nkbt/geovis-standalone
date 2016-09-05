@@ -1,6 +1,6 @@
-# app
+# GeoVis
 
-> My superb app
+GeoVis Standalone
 
 
 ## Dev
@@ -9,11 +9,13 @@
 $ npm install
 ```
 
+
 ### Run
 
 ```
 $ npm start
 ```
+
 
 ### Build
 
@@ -26,4 +28,4 @@ Builds the app for macOS, Linux, and Windows, using [electron-packager](https://
 
 ## License
 
-MIT © [<%= name %>](<%= website %>)
+MIT
