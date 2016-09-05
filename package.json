@@ -1,6 +1,6 @@
 {
   "name": "geovis-standalone",
-  "productName": "GeoVis Standalone",
+  "productName": "GeoVis",
   "version": "0.0.0",
   "description": "GeoVis Standalone",
   "scripts": {
