@@ -1,0 +1,49 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+
+  /* Disable text selection, or your app will feel like a web page */
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  cursor: default;
+
+  /* Cover the whole window */
+  height: 100%;
+
+  /* Smoother startup */
+  animation: fadein 0.5s;
+}
+
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -250px;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 60px;
+}
+
