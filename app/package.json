@@ -1,0 +1,39 @@
+{
+  "name": "geovis-standalone",
+  "productName": "GeoVis",
+  "version": "0.0.0",
+  "description": "GeoVis Standalone",
+  "scripts": {
+    "test": "echo volkswagen",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --platform=darwin --arch=x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkbt/geovis-standalone.git"
+  },
+  "keywords": [
+    "electron-app",
+    "electron",
+    "geovis"
+  ],
+  "author": "Nik Butenko <nik@butenko.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkbt/geovis-standalone/issues"
+  },
+  "homepage": "https://github.com/nkbt/geovis-standalone",
+  "devDependencies": {
+    "devtron": "1.3.0",
+    "electron": "1.3.5"
+  },
+  "dependencies": {
+    "@nkbt/geovis": "*",
+    "electron-debug": "1.0.1",
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
+    "react-redux": "4.4.5",
+    "redux": "3.6.0",
+    "three": "0.80.1"
+  }
+}

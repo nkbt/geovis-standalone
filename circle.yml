@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 6
+
+test:
+  override:
+    - npm test
+
+deployment:
+  production:
+    branch: master
+    commands:
+    - npm run deploy
