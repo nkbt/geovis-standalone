@@ -26,7 +26,7 @@ body {
   height: 100%;
 
   /* Smoother startup */
-  animation: fadein 0.5s;
+  animation: fadein 2s;
 }
 
 header {
