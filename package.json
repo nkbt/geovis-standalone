@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/nkbt/geovis-standalone",
   "devDependencies": {
+    "devtron": "1.3.0",
     "electron": "1.3.5",
     "electron-builder": "6.4.1"
   },
