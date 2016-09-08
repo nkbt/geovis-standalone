@@ -19,7 +19,6 @@ function onClosed() {
 
 function createMainWindow() {
   const win = new BrowserWindow({
-    title: 'OMG',
     width: 1600,
     height: 900,
     backgroundColor: '#000000',

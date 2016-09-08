@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GeoVis Standalone</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="geovis.css">
+  </head>
+  <body>
+    <div class="app"></div>
+
+    <script type="text/javascript" src="react.js"></script>
+    <script type="text/javascript" src="react-dom.js"></script>
+    <script type="text/javascript" src="redux.js"></script>
+    <script type="text/javascript" src="react-redux.js"></script>
+    <script type="text/javascript" src="three.js"></script>
+    <script type="text/javascript" src="geovis.js"></script>
+    <script type="text/javascript" src="port.js"></script>
+    <script type="text/javascript">
+      (function () {
+        'use strict';
+
+
+        function connect(_store) {
+          var client = new WebSocket(`ws://${document.location.hostname}:${WS_PORT}`);
+
+
+          function onMessage(raw) {
+            var message = JSON.parse(raw);
+
+            // TODO: add attacks to store
+            console.log(`message`, message);
+          }
+
+          function onConnect() {
+            client.send(JSON.stringify({action: 'GEO_START'}));
+          }
+
+
+          client.onopen = onConnect;
+          client.onmessage = onMessage;
+          return client;
+        }
+
+        connect();
+
+        var el = React.createElement;
+
+        var store = Redux.createStore(Redux.combineReducers({
+          attacks: GeoVis.attacks,
+          controls: GeoVis.controls
+        }));
+        var _ws = connect(store);
+
+        var appRoot = document.createElement('div');
+        appRoot.id = 'app';
+        document.body.appendChild(appRoot);
+        ReactDOM.render(el(ReactRedux.Provider, {store}, el(GeoVis.App)), appRoot);
+      })()
+    </script>
+  </body>
+</html>
