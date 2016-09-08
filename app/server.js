@@ -1,4 +1,4 @@
-const {run} = require('@nkbt/geovis-mock');
+const {run} = require('@nkbt/geovis-server');
 
 const {
   WS_HOST = '0.0.0.0',

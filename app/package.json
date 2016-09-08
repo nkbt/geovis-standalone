@@ -25,7 +25,7 @@
   "homepage": "https://github.com/nkbt/geovis-standalone",
   "dependencies": {
     "@nkbt/geovis": "*",
-    "@nkbt/geovis-mock": "*",
+    "@nkbt/geovis-server": "*",
     "electron-debug": "1.0.1",
     "react": "15.3.1",
     "react-dom": "15.3.1",
