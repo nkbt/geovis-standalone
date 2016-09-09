@@ -8,6 +8,6 @@ test:
 
 deployment:
   release:
-    tag: /release-.*/
+    branch: master
     commands:
       - npm run release
