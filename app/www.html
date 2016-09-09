@@ -21,15 +21,13 @@
         'use strict';
 
 
-        function connect(_store) {
+        function connect(store) {
           var client = new WebSocket(`ws://${document.location.hostname}:${WS_PORT}`);
 
 
           function onMessage(raw) {
-            var message = JSON.parse(raw);
-
-            // TODO: add attacks to store
-            console.log(`message`, message);
+            var message = JSON.parse(raw.data);
+            store.dispatch({type: GeoVis.attacks.ATTACKS_ADD, attacks: message.res});
           }
 
           function onConnect() {
@@ -42,13 +40,11 @@
           return client;
         }
 
-        connect();
-
         var el = React.createElement;
 
         var store = Redux.createStore(Redux.combineReducers({
-          attacks: GeoVis.attacks,
-          controls: GeoVis.controls
+          attacks: GeoVis.attacks.attacks,
+          controls: GeoVis.controls.controls
         }));
         var _ws = connect(store);
 

@@ -1,16 +1,15 @@
 const websocket = require('ws');
+const {attacks} = require('@nkbt/geovis');
 
 const {
   WS_PORT = 10000
 } = process.env;
 
 
-module.exports = _store => {
+module.exports = store => {
   const onMessage = function (raw) {
     const message = JSON.parse(raw);
-
-    // TODO: add attacks to store
-    console.log(`message`, message);
+    store.dispatch({type: attacks.ATTACKS_ADD, attacks: message.res});
   };
 
 

@@ -10,7 +10,10 @@ const connect = require('./connect');
 
 const el = React.createElement;
 
-const store = createStore(combineReducers({attacks, controls}));
+const store = createStore(combineReducers({
+  attacks: attacks.attacks,
+  controls: controls.controls
+}));
 const _ws = connect(store);
 
 const appRoot = document.createElement('div');
