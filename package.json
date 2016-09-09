@@ -1,5 +1,5 @@
 {
-  "name": "geovis-standalone",
+  "name": "@nkbt/geovis-standalone",
   "productName": "GeoVis",
   "version": "0.0.0",
   "description": "GeoVis Standalone",
