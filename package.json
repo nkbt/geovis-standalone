@@ -7,7 +7,8 @@
     "postinstall": "install-app-deps",
     "start": "electron ./app --enable-logging",
     "dev": "NODE_ENV=development npm run start",
-    "release": "build --linux --macos --x64"
+    "release": "build --linux --macos --x64",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",

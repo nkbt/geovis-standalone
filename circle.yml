@@ -7,7 +7,7 @@ test:
     - npm test
 
 deployment:
-  production:
-    branch: master
+  release:
+    tag: /v.*/
     commands:
       - npm run release
