@@ -27,7 +27,9 @@
 
           function onMessage(raw) {
             var message = JSON.parse(raw.data);
-            store.dispatch({type: GeoVis.attacks.ATTACKS_ADD, attacks: message.res});
+            if (store.getState().controls === GeoVis.controls.STATE_PLAYING) {
+              store.dispatch({type: GeoVis.attacks.ATTACKS_ADD, attacks: message.res});
+            }
           }
 
           function onConnect() {
