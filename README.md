@@ -3,28 +3,42 @@
 GeoVis Standalone
 
 
-## Dev
+## Usage
 
+Download the latest release from https://github.com/nkbt/geovis-standalone/releases
+
+Install and run app
+
+For testing without any input streams:
+1. Click on right bottom corner of app window
+2. It will bring up hidden menu that will allow to add random attack or clear all visible attacks
+
+
+## Installing and running geovis-mock
+
+NodeJS 6 is required to run geovis-mock CLI
+
+```sh
+npm install --global @nkbt/geovis-mock
+
+geovis-mock
 ```
-$ npm install
+
+
+## Develompent
+
+```sh
+git clone git@github.com:nkbt/geovis-standalone.git
+cd geovis-standalone
+npm install
+npm start
 ```
 
+## Release
 
-### Run
-
+```sh
+npm run release
 ```
-$ npm start
-```
-
-
-### Build
-
-```
-$ npm run build
-```
-
-Builds the app for macOS, Linux, and Windows, using [electron-packager](https://github.com/electron-userland/electron-packager).
-
 
 ## License
 
